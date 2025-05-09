@@ -1,5 +1,7 @@
 package com.finance_report.company.entity;
 
+import com.finance_report.company.dto.DartCompanyDto;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -20,4 +22,12 @@ public class CompanyEntity {
     private String corpName; // 기업명
 
     private String stockCode; // 종목 코드
+
+    public static CompanyEntity from(DartCompanyDto dto) {
+        CompanyEntity entity = new CompanyEntity();
+        entity.setCorpCode(dto.getCorpCode());
+        entity.setCorpName(dto.getCorpName());
+        entity.setStockCode(dto.getStockCode());
+        return entity;
+    }
 }

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.finance_report.company.entity.CompanyEntity;
+import com.finance_report.company.dto.DartCompanyDto;
 import com.finance_report.company.service.CompanyService;
 
 import lombok.RequiredArgsConstructor;
@@ -20,12 +20,12 @@ public class CompanyController {
     private final CompanyService companyService;
 
     @GetMapping("/{corpCode}")
-    public CompanyEntity getCompany(@PathVariable String corpCode) {
+    public DartCompanyDto getCompany(@PathVariable String corpCode) {
         return companyService.getOrFetchCompany(corpCode);
     }
 
     @PostMapping
-    public CompanyEntity addCompany(@RequestBody CompanyEntity company) {
-        return companyService.addCompany(company);
+    public DartCompanyDto addCompany(@RequestBody DartCompanyDto dto) {
+        return companyService.addCompany(dto);
     }
 }
