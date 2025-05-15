@@ -31,3 +31,5 @@ bin/main/application.yml
 build/reports/problems/problems-report.html
 index.html
 TEST-*.xml
+
+CORPCODE.xml
