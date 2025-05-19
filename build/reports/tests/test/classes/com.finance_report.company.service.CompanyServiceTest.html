@@ -3,16 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - Package com.finance_report</title>
+<title>Test results - CompanyServiceTest</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>Package com.finance_report</h1>
+<h1>CompanyServiceTest</h1>
 <div class="breadcrumbs">
-<a href="../index.html">all</a> &gt; com.finance_report</div>
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.finance_report.company.service.html">com.finance_report.company.service</a> &gt; CompanyServiceTest</div>
 <div id="summary">
 <table>
 <tr>
@@ -22,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">2</div>
 <p>tests</p>
 </div>
 </td>
@@ -40,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.346s</div>
+<div class="counter">0.248s</div>
 <p>duration</p>
 </div>
 </td>
@@ -60,31 +61,31 @@
 <div class="tab-container">
 <ul class="tabLinks">
 <li>
-<a href="#">Classes</a>
+<a href="#">Tests</a>
 </li>
 </ul>
 <div class="tab">
-<h2>Classes</h2>
+<h2>Tests</h2>
 <table>
 <thead>
 <tr>
-<th>Class</th>
-<th>Tests</th>
-<th>Failures</th>
-<th>Ignored</th>
+<th>Test</th>
+<th>Method name</th>
 <th>Duration</th>
-<th>Success rate</th>
+<th>Result</th>
 </tr>
 </thead>
 <tr>
-<td class="success">
-<a href="../classes/com.finance_report.FinanceReportApplicationTests.html">FinanceReportApplicationTests</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.346s</td>
-<td class="success">100%</td>
+<td class="success">DB에 회사 정보가 있으면 DB에서 조회한 정보를 반환</td>
+<td class="success">getOrFetchCompany_WhenCompanyExistsInDB_ReturnsCompanyFromDB()</td>
+<td class="success">0.244s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">DB에 회사 정보가 없으면 Dart API 호출 후 저장된 정보를 반환</td>
+<td class="success">getOrFetchCompany_WhenCompanyNotExistsInDB_FetchesFromDartAndReturns()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
