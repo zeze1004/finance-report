@@ -5,4 +5,6 @@ import com.finance_report.company.entity.CompanyEntity;
 
 public interface DartClient {
 	CompanyEntity fetchCompany(DartCompanyDto dto);
+
+	String fetchCorpCodeByName(String companyName);
 }

@@ -39,4 +39,8 @@ public class CompanyService {
 					return DartCompanyDto.from(savedEntity);
 				});
 	}
+
+	public String getCorpCode(String companyName) {
+		return dartClient.fetchCorpCodeByName(companyName);
+	}
 }

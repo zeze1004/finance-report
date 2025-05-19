@@ -19,7 +19,7 @@ public class CompanyController {
 
     private final CompanyService companyService;
 
-    @GetMapping("/{corpCode}")
+    @GetMapping("corp-code/{corpCode}")
     public DartCompanyDto getCompany(@PathVariable String corpCode) {
         return companyService.getOrFetchCompany(corpCode);
     }
@@ -27,5 +27,10 @@ public class CompanyController {
     @PostMapping
     public DartCompanyDto addCompany(@RequestBody DartCompanyDto dto) {
         return companyService.addCompany(dto);
+    }
+
+    @GetMapping("name/{companyName}")
+    public String getCorpCode(@PathVariable String companyName) {
+        return companyService.getCorpCode(companyName);
     }
 }
